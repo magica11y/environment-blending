@@ -36,8 +36,10 @@ which provides a suite of functions to detect “user-preference” and “envir
 
 In addition to `environmentBlending()`, [Magica11y](https://magica11y.github.io) also provides…
 
-  * :last_quarter_moon: [`invertedColors()`](https://github.com/magica11y/inverted-colors)
+  * :new_moon: [`invertedColors()`](https://github.com/magica11y/inverted-colors)
   * :candle: [`lightLevel()`](https://github.com/magica11y/light-level)
+  * :art: [`forcedColors()`](https://github.com/magica11y/forced-colors)
+  * :last_quarter_moon: [`prefersColorScheme()`](https://github.com/magica11y/prefers-color-scheme)
   * :high_brightness: [`prefersContrast()`](https://github.com/magica11y/prefers-contrast)
   * :roller_coaster: [`prefersReducedMotion()`](https://github.com/magica11y/prefers-reduced-motion)
   * :gem: [`prefersReducedTransparency()`](https://github.com/magica11y/prefers-reduced-transparency)
@@ -68,7 +70,7 @@ You can also include `environmentBlending()` from a CDN on your page, such as [j
 
 ```js
 var displayBlend = window.magica11y.environmentBlending.default();
-var enableDarkMode = (displayBlend === window.magica11y.environmentBlending.availableDisplayBlends.ADDITIVE);
+var isAugmentedRealityDisplay = (displayBlend === window.magica11y.environmentBlending.availableDisplayBlends.ADDITIVE);
 ```
 
 … or as a CommonJS module…
@@ -76,7 +78,7 @@ var enableDarkMode = (displayBlend === window.magica11y.environmentBlending.avai
 ```js
 const environmentBlending = require('@magica11y/environment-blending');
 const displayBlend = environmentBlending.default();
-const enableDarkMode = (displayBlend === environmentBlending.availableDisplayBlends.ADDITIVE);
+const isAugmentedRealityDisplay = (displayBlend === environmentBlending.availableDisplayBlends.ADDITIVE);
 ```
 
 … or as an ES module…
@@ -85,7 +87,7 @@ const enableDarkMode = (displayBlend === environmentBlending.availableDisplayBle
 import environmentBlending, { availableDisplayBlends } from 'magica11y/environmentBlending';
 
 const displayBlend = environmentBlending();
-const enableDarkMode = displayBlend === availableDisplayBlends.ADDITIVE;
+const isAugmentedRealityDisplay = (displayBlend === availableDisplayBlends.ADDITIVE);
 ```
 
 The `availableDisplayBlends` object contains all the possible values supported by the `'environment-blending'` media query…
