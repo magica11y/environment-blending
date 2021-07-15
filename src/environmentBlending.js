@@ -1,6 +1,6 @@
 // @flow
 
-import matchUserPreference from '@magica11y/cauldron';
+import matchUserPreference from '@magica11y/match-user-preference';
 
 import availableDisplayBlends, { type DisplayBlend } from './availableDisplayBlends';
 
