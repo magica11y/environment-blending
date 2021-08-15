@@ -18,14 +18,12 @@
 
 # :sparkles: Introduction
 
-Quoting from the [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://drafts.csswg.org/mediaqueries-5)
+Quoting from the [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) [level 5](https://www.w3.org/TR/mediaqueries-5/)
 [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) specfication…
 
-> The [`environment-blending`](https://drafts.csswg.org/mediaqueries-5/#environment-blending) media feature
-> is used to detect if the user has requested the system to minimize the amount of animation or motion it uses.
+> The `environment-blending` media feature is used to query the characteristics of the user’s display so the author can adjust the style of the document. An author might choose to adjust the visuals and/or layout of the page depending on the display technology to increase the appeal or improve legibility.
 
-:tv: **`environmentBlending()`** is part of :crystal_ball: [**Magica11y**](https://magica11y.github.io),
-which provides a suite of functions to detect “user-preference” and “environment” media features.
+:tv: **`environmentBlending()`** is part of :crystal_ball: [**Magica11y**](https://magica11y.github.io), which provides a suite of functions to detect “user-preference” and “environment” media features.
 
 [Magica11y](https://magica11y.github.io) functions are awesome because…
   * They have **zero** dependencies
@@ -36,9 +34,9 @@ which provides a suite of functions to detect “user-preference” and “envir
 
 In addition to `environmentBlending()`, [Magica11y](https://magica11y.github.io) also provides…
 
-  * :new_moon: [`invertedColors()`](https://github.com/magica11y/inverted-colors)
-  * :candle: [`lightLevel()`](https://github.com/magica11y/light-level)
   * :art: [`forcedColors()`](https://github.com/magica11y/forced-colors)
+  * :new_moon: [`invertedColors()`](https://github.com/magica11y/inverted-colors)
+  * ~:candle: [`lightLevel()`](https://github.com/magica11y/light-level)~
   * :last_quarter_moon: [`prefersColorScheme()`](https://github.com/magica11y/prefers-color-scheme)
   * :high_brightness: [`prefersContrast()`](https://github.com/magica11y/prefers-contrast)
   * :roller_coaster: [`prefersReducedMotion()`](https://github.com/magica11y/prefers-reduced-motion)
@@ -92,11 +90,11 @@ const isAugmentedRealityDisplay = (displayBlend === availableDisplayBlends.ADDIT
 
 The `availableDisplayBlends` object contains all the possible values supported by the `'environment-blending'` media query…
 
-* `availableDisplayBlends.OPAQUE` (spec: [`'opaque'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-environment-blending-opaque))
+* `availableDisplayBlends.OPAQUE` (spec: [`'opaque'`](https://www.w3.org/TR/mediaqueries-5/#valdef-media-environment-blending-opaque))
   > The document is rendered on an opaque medium, such as a traditional monitor or paper. Black is dark and white is 100% light.
-* `availableDisplayBlends.ADDITIVE` (spec: [`'additive'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-environment-blending-additive))
+* `availableDisplayBlends.ADDITIVE` (spec: [`'additive'`](https://www.w3.org/TR/mediaqueries-5/#valdef-media-environment-blending-additive))
   > The display blends the colors of the canvas with the real world using additive mixing. Black is fully transparent and white is 100% light. For example: a head-up display in a car.
-* `availableDisplayBlends.SUBTRACTIVE` (spec: [`'subtractive'`](https://drafts.csswg.org/mediaqueries-5/#valdef-media-environment-blending-subtractive))
+* `availableDisplayBlends.SUBTRACTIVE` (spec: [`'subtractive'`](https://www.w3.org/TR/mediaqueries-5/#valdef-media-environment-blending-subtractive))
   > The display blends the colors of the canvas with the real world using subtractive mixing. White is fully transparent and dark colors have the most contrast. For example: an LCD display embedded in a bathroom mirror.
 * `null`
   > The display characteristics could not be determined.
